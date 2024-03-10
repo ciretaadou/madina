@@ -14,47 +14,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
-        title: Text("Madina"),
-        backgroundColor: col_pp,
-
-          actions: [
-
-            ///----- rechercher
-            GestureDetector(
-              onTap: () {
-
-              },
-              child: Icon(
-                Icons.search, size: 40,
-              ),
-            ),
-
-            ///----- panier
-            GestureDetector(
-              onTap: () {
-
-              },
-              child: Icon(
-                Icons.shop, size: 40,
-              ),
-            ),
-
-            ///----- parametre
-            GestureDetector(
-              onTap: () {
-
-              },
-              child: Icon(
-                Icons.more_vert, size: 40,
-              ),
-            ),
-
-
-
-          ],
-
-      ),
 
 
       body:  DefaultTabController(
