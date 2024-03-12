@@ -35,9 +35,9 @@ class _NouveauState extends State<Nouveau> {
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 SizedBox(width: 20),
-                _categorie("Tous", col_pp, height: 5),
+                _categorie("Toutes les categories", col_pp, height: 5),
                 SizedBox(width: 10),
-                _categorie("Vintage", Colors.grey, height: 5),
+                _categorie("Telephone", Colors.grey, height: 5),
                 SizedBox(width: 10),
                 _categorie("Vêtement", Colors.grey, height: 5),
                 SizedBox(width: 10),
@@ -63,32 +63,300 @@ class _NouveauState extends State<Nouveau> {
             Container(
               margin: EdgeInsets.all(5),
               width: MediaQuery.of(context).size.width / 2.2,
-              height: 200,
-              color: Colors.black,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                //color: Colors.grey.shade200,
+                border: Border.all(color: col_pp ,width: 2)
+              ),
               child: Column(
                 children: [
                   Container(
                     height: 170,
+                    width: MediaQuery.of(context).size.width / 2.2,
                     clipBehavior: Clip.hardEdge,
-                    width: MediaQuery.of(context).size.width * .34,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      //image: DecorationImage(
-                        //image: AssetImage("images/findo.jpg")
-                     // )
+                      image: DecorationImage(
+                        image: AssetImage("images/findo.jpg"),
+                        fit: BoxFit.cover
+                      )
                     ),
                   ),
+                  Text("Fauteuil de bureau"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text("Meuble"),
+                    ],
+                  ),
+                  SizedBox(height: 2),
+                  _categorie("Prix:1.000.000 gnf", Colors.blue, height: 5),
                 ],
               ),
             ),
             Container(
               margin: EdgeInsets.all(5),
               width: MediaQuery.of(context).size.width / 2.2,
-              height: 200,
-              color: Colors.blue,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  //color: Colors.grey.shade200,
+                  border: Border.all(color: col_pp ,width: 2)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 170,
+                    width: MediaQuery.of(context).size.width / 2.2,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        image: DecorationImage(
+                            image: AssetImage("images/iphone.jpg"),
+                            fit: BoxFit.cover
+                        )
+                    ),
+                  ),
+                  Text("Iphone 12 pro max"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text("Telephone"),
+                    ],
+                  ),
+                  SizedBox(height: 2),
+                  _categorie("Prix:2.500.000 gnf", Colors.blue, height: 5),
+                ],
+              ),
             ),
           ],
-        )
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.all(5),
+              width: MediaQuery.of(context).size.width / 2.2,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                //color: Colors.grey.shade200,
+                border: Border.all(color: col_pp ,width: 2)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 170,
+                    width: MediaQuery.of(context).size.width / 2.2,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      image: DecorationImage(
+                        image: AssetImage("images/findo.jpg"),
+                        fit: BoxFit.cover
+                      )
+                    ),
+                  ),
+                  Text("Fauteuil de bureau"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text("Meuble"),
+                    ],
+                  ),
+                  SizedBox(height: 2),
+                  _categorie("Prix:1.000.000 gnf", Colors.blue, height: 5),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(5),
+              width: MediaQuery.of(context).size.width / 2.2,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  //color: Colors.grey.shade200,
+                  border: Border.all(color: col_pp ,width: 2)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 170,
+                    width: MediaQuery.of(context).size.width / 2.2,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        image: DecorationImage(
+                            image: AssetImage("images/chaussure.jpg"),
+                            fit: BoxFit.cover
+                        )
+                    ),
+                  ),
+                  Text("Chaussure nike"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text("Chaussure"),
+                    ],
+                  ),
+                  SizedBox(height: 2),
+                  _categorie("Prix:250.000 gnf", Colors.blue, height: 5),
+                ],
+              ),
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.all(5),
+              width: MediaQuery.of(context).size.width / 2.2,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  //color: Colors.grey.shade200,
+                  border: Border.all(color: col_pp ,width: 2)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 170,
+                    width: MediaQuery.of(context).size.width / 2.2,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        image: DecorationImage(
+                            image: AssetImage("images/findo.jpg"),
+                            fit: BoxFit.cover
+                        )
+                    ),
+                  ),
+                  Text("Fauteuil de bureau"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text("Meuble"),
+                    ],
+                  ),
+                  SizedBox(height: 2),
+                  _categorie("Prix:1.000.000 gnf", Colors.blue, height: 5),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(5),
+              width: MediaQuery.of(context).size.width / 2.2,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  //color: Colors.grey.shade200,
+                  border: Border.all(color: col_pp ,width: 2)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 170,
+                    width: MediaQuery.of(context).size.width / 2.2,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        image: DecorationImage(
+                            image: AssetImage("images/iphone.jpg"),
+                            fit: BoxFit.cover
+                        )
+                    ),
+                  ),
+                  Text("Iphone 12 pro max"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text("Telephone"),
+                    ],
+                  ),
+                  SizedBox(height: 2),
+                  _categorie("Prix:2.500.000 gnf", Colors.blue, height: 5),
+                ],
+              ),
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.all(5),
+              width: MediaQuery.of(context).size.width / 2.2,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  //color: Colors.grey.shade200,
+                  border: Border.all(color: col_pp ,width: 2)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 170,
+                    width: MediaQuery.of(context).size.width / 2.2,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        image: DecorationImage(
+                            image: AssetImage("images/findo.jpg"),
+                            fit: BoxFit.cover
+                        )
+                    ),
+                  ),
+                  Text("Fauteuil de bureau"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text("Meuble"),
+                    ],
+                  ),
+                  SizedBox(height: 2),
+                  _categorie("Prix:1.000.000 gnf", Colors.blue, height: 5),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(5),
+              width: MediaQuery.of(context).size.width / 2.2,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  //color: Colors.grey.shade200,
+                  border: Border.all(color: col_pp ,width: 2)
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    height: 170,
+                    width: MediaQuery.of(context).size.width / 2.2,
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        image: DecorationImage(
+                            image: AssetImage("images/chaussure.jpg"),
+                            fit: BoxFit.cover
+                        )
+                    ),
+                  ),
+                  Text("Chaussure nike"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                      Text("Chaussure"),
+                    ],
+                  ),
+                  SizedBox(height: 2),
+                  _categorie("Prix:250.000 gnf", Colors.blue, height: 5),
+                ],
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }

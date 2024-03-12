@@ -41,8 +41,8 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         //new Icon(Icons.all_inclusive),
-                        new Icon(Icons.new_releases),
-                        new Text("Nouveau ")
+                        new Icon(Icons.all_out),
+                        new Text("Toute.s ")
                       ],
                     ),
                   ),
