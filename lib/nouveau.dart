@@ -92,6 +92,24 @@ class _NouveauState extends State<Nouveau> {
                   ),
                   SizedBox(height: 2),
                   _categorie("Prix:1.000.000 gnf", Colors.blue, height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(2),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: col_pp ,width: 2)
+                        ),
+                        child: IconButton(
+                          onPressed: (){
+
+                          },
+                          icon: Icon(Icons.shop, color: col_pp,),
+                        ),
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
@@ -127,6 +145,24 @@ class _NouveauState extends State<Nouveau> {
                   ),
                   SizedBox(height: 2),
                   _categorie("Prix:2.500.000 gnf", Colors.blue, height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(2),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: col_pp ,width: 2)
+                        ),
+                        child: IconButton(
+                          onPressed: (){
+
+                          },
+                          icon: Icon(Icons.shop, color: col_pp,),
+                        ),
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
@@ -167,6 +203,24 @@ class _NouveauState extends State<Nouveau> {
                   ),
                   SizedBox(height: 2),
                   _categorie("Prix:1.000.000 gnf", Colors.blue, height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(2),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: col_pp ,width: 2)
+                        ),
+                        child: IconButton(
+                          onPressed: (){
+
+                          },
+                          icon: Icon(Icons.shop, color: col_pp,),
+                        ),
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
@@ -202,6 +256,24 @@ class _NouveauState extends State<Nouveau> {
                   ),
                   SizedBox(height: 2),
                   _categorie("Prix:250.000 gnf", Colors.blue, height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(2),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: col_pp ,width: 2)
+                        ),
+                        child: IconButton(
+                          onPressed: (){
+
+                          },
+                          icon: Icon(Icons.shop, color: col_pp,),
+                        ),
+                      )
+                    ],
+                  )
                 ],
               ),
             ),

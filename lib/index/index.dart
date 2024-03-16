@@ -4,6 +4,7 @@ import 'package:madina/couleur_page.dart';
 import 'package:madina/index/home_page.dart';
 import 'package:madina/index/message_page.dart';
 import 'package:madina/index/notification_page.dart';
+import 'package:madina/index/panier.dart';
 import 'package:madina/index/profil_page.dart';
 
 
@@ -47,10 +48,29 @@ class _IndexLaureatState extends State<IndexMadina> {
           ///----- panier
           GestureDetector(
             onTap: () {
+              Navigator.of(context).push(
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      Panier(),
+                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                    const begin = Offset(1.0, 0.0); // Début de la transition
+                    const end = Offset.zero; // Fin de la transition
+                    const curve = Curves.linear; // Courbe d'animation
 
+                    var tween = Tween(begin: begin, end: end)
+                        .chain(CurveTween(curve: curve));
+                    var offsetAnimation = animation.drive(tween);
+
+                    return SlideTransition(
+                      position: offsetAnimation,
+                      child: child,
+                    );
+                  },
+                ),
+              );
             },
             child: Icon(
-              Icons.shop, size: 40,
+              Icons.shop, size: 40, color: Colors.white,
             ),
           ),
 
