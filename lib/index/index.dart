@@ -30,7 +30,7 @@ class _IndexLaureatState extends State<IndexMadina> {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("Madina", style: TextStyle(fontSize: 35),),
+        title: Text("Madina", style: TextStyle(fontSize: 35, color: Colors.white, fontWeight: FontWeight.bold),),
         backgroundColor: col_pp,
 
         actions: [
@@ -41,7 +41,7 @@ class _IndexLaureatState extends State<IndexMadina> {
 
             },
             child: Icon(
-              Icons.search, size: 40,
+              Icons.search, size: 30, color: Colors.white
             ),
           ),
 
@@ -70,7 +70,7 @@ class _IndexLaureatState extends State<IndexMadina> {
               );
             },
             child: Icon(
-              Icons.shop, size: 40, color: Colors.white,
+              Icons.shopping_cart_outlined, size: 30, color: Colors.white,
             ),
           ),
 
@@ -80,7 +80,7 @@ class _IndexLaureatState extends State<IndexMadina> {
 
             },
             child: Icon(
-              Icons.more_vert, size: 40,
+              Icons.more_vert, size: 30,color: Colors.white
             ),
           ),
 
@@ -142,7 +142,7 @@ class _IndexLaureatState extends State<IndexMadina> {
                 child: Column(
                   children: [
                     new Icon(Icons.home,
-                        color: currentTab == 0 ? Colors.blue : Colors
+                        color: currentTab == 0 ? col_pp : Colors
                             .grey),
                   ],
                 ),
@@ -161,7 +161,7 @@ class _IndexLaureatState extends State<IndexMadina> {
                 child: Column(
                   children: [
                     new Icon(Icons.forum_outlined,
-                        color: currentTab == 1 ? Colors.blue : Colors
+                        color: currentTab == 1 ? col_pp : Colors
                             .grey),
                   ],
                 ),
@@ -180,7 +180,7 @@ class _IndexLaureatState extends State<IndexMadina> {
                 child: Column(
                   children: [
                     new Icon(Icons.notification_add,
-                        color: currentTab == 2 ? Colors.blue : Colors
+                        color: currentTab == 2 ? col_pp : Colors
                             .grey),
                   ],
                 ),
@@ -198,7 +198,7 @@ class _IndexLaureatState extends State<IndexMadina> {
                   children: [
 
                     new Icon(Icons.person,
-                        color: currentTab == 3 ? Colors.blue : Colors
+                        color: currentTab == 3 ? col_pp : Colors
                             .grey),
                   ],
                 ),

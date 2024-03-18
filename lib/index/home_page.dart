@@ -38,20 +38,18 @@ class _HomePageState extends State<HomePage> {
 
                 tabs: [
                   Tab(
-                    child: Column(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        //new Icon(Icons.all_inclusive),
-                        new Icon(Icons.all_out),
-                        new Text("Toute.s ")
+                        new Text("Toutes ")
                       ],
                     ),
                   ),
                   Tab(
-                    child: Column(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        //new Icon(Icons.stacked_bar_chart),
-                        new Icon(Icons.nest_cam_wired_stand),
-                        new Text("Vintage")
+                        new Text("Anciens")
                       ],
                     ),),
 

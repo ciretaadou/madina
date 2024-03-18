@@ -86,18 +86,36 @@ class _VintageState extends State<Vintage>  {
                             ),
                           ),
                           Positioned(
+                            top: 1,
+                            left: 1,
+                            child: Container(
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.all(0),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                                  color: Colors.transparent),
+                              child: IconButton(
+                                onPressed: (){
+
+                                },
+                                icon: Icon(Icons.shopping_cart_outlined, color: col_pp, size: 35,),
+                              ),
+                            ),
+                          ),
+                          Positioned(
                             top: 5,
                             right: 5,
                             child: Container(
                               alignment: Alignment.center,
-                              padding: EdgeInsets.all(2),
+                              padding: EdgeInsets.all(3),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                                  color: Colors.red),
+                                  color: col_pp_vintage
+                              ),
                               child: Text(
                                 "Vintage",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
+                                    color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
@@ -112,25 +130,7 @@ class _VintageState extends State<Vintage>  {
                         ],
                       ),
                       SizedBox(height: 2),
-                      _categorie("Prix:1.000.000 gnf", Colors.blue, height: 5),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            margin: EdgeInsets.all(2),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: col_pp ,width: 2)
-                            ),
-                            child: IconButton(
-                              onPressed: (){
-
-                              },
-                              icon: Icon(Icons.shop, color: col_pp,),
-                            ),
-                          )
-                        ],
-                      )
+                      _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 5),
                     ],
                   ),
                 ),
@@ -160,18 +160,36 @@ class _VintageState extends State<Vintage>  {
                         ),
                       ),
                       Positioned(
+                        top: 1,
+                        left: 4,
+                        child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              //border: Border.all(color: col_pp ,width: 2),
+                              color: Colors.transparent
+                          ),
+                          child: IconButton(
+                            onPressed: (){
+
+                            },
+                            icon: Icon(Icons.shopping_cart_outlined, color: col_pp, size: 35,),
+                          ),
+                        ),
+                      ),
+                      Positioned(
                         top: 5,
                         right: 5,
                         child: Container(
                           alignment: Alignment.center,
-                          padding: EdgeInsets.all(2),
+                          padding: EdgeInsets.all(3),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(15)),
-                              color: Colors.red),
+                              color: col_pp_vintage),
                           child: Text(
                             "Vintage",
                             style: TextStyle(
-                                color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),
+                                color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -186,25 +204,7 @@ class _VintageState extends State<Vintage>  {
                     ],
                   ),
                   SizedBox(height: 2),
-                  _categorie("Prix:2.500.000 gnf", Colors.blue, height: 5),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(2),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: col_pp ,width: 2)
-                        ),
-                        child: IconButton(
-                          onPressed: (){
-
-                          },
-                          icon: Icon(Icons.shop, color: col_pp,),
-                        ),
-                      )
-                    ],
-                  )
+                  _categorie("Prix:2.500.000 gnf", col_pp_prix, height: 5),
                 ],
               ),
             ),
