@@ -2,24 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:madina/couleur_page.dart';
 
 
-class Panier extends StatefulWidget {
-  const Panier({Key? key}) : super(key: key);
+class RecherchePage extends StatefulWidget {
+  const RecherchePage({Key? key}) : super(key: key);
 
   @override
-  State<Panier> createState() => _PanierState();
+  State<RecherchePage> createState() => _RecherchePageState();
 }
 
-class _PanierState extends State<Panier>  {
+class _RecherchePageState extends State<RecherchePage> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  TextEditingController _searchController = TextEditingController(); // Controller pour le champ de recherche
+  String _searchText = ""; // Texte de recherche
 
-  @override
-  void initState() {
-    super.initState();
-  }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +23,48 @@ class _PanierState extends State<Panier>  {
       body: ListView(
         children: [
 
+          SizedBox(height: 8),
+          /// recherche ---
+          Stack(
+            children: [
+              TextFormField(
+                controller: _searchController,
+                onChanged: (value) {
+                  setState(() {
+                    _searchText = value; // Met à jour le texte de recherche lors de la saisie
+                  });
+                },
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  hintText: "Recherher",
+                  contentPadding: EdgeInsets.all(0),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(10 )
+                  ),
+                  //fillColor: Color.fromRGBO(220, 220, 220, 1),
+                  fillColor: Colors.white,
+                  filled: true,
+                ),
+              ),
+              Positioned(
+                  right: 8,
+                  bottom: 7,
+                  child: Container(
+                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0xFF5F67EA)
+                    ),
+                    child: Icon(
+                      Icons.mic_outlined,
+                      color: Colors.white,
+                      size: 25,
+                    ),
+                  )
+              )
+            ],
+          ),
           SizedBox(height: 8),
 
           Row(
@@ -62,8 +99,8 @@ class _PanierState extends State<Panier>  {
                           left: 1,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: col_pp,
-                              borderRadius: BorderRadius.circular(12)
+                                color: col_pp,
+                                borderRadius: BorderRadius.circular(12)
                             ),
                             child: IconButton(
                               onPressed: (){
@@ -186,6 +223,7 @@ class _PanierState extends State<Panier>  {
       ),
     );
   }
+
 
 
 

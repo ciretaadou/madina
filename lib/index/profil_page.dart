@@ -13,6 +13,11 @@ class _ProfilPageState extends State<ProfilPage> {
   Widget build(BuildContext context) {
     return  Scaffold(
 
+      appBar: AppBar(
+        title: Text("Profil"),
+        backgroundColor: col_pp,
+      ),
+
         body:  ListView(
           children: [
 

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:madina/couleur_page.dart';
-import 'package:madina/nouveau.dart';
-import 'package:madina/vintage.dart';
 
 
 class NotificationPage  extends StatefulWidget {

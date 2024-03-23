@@ -2,10 +2,10 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:madina/couleur_page.dart';
 import 'package:madina/index/home_page.dart';
-import 'package:madina/index/message_page.dart';
 import 'package:madina/index/notification_page.dart';
 import 'package:madina/index/panier.dart';
 import 'package:madina/index/profil_page.dart';
+import 'package:madina/index/recherche_page.dart';
 
 
 class IndexMadina extends StatefulWidget {
@@ -35,23 +35,14 @@ class _IndexLaureatState extends State<IndexMadina> {
 
         actions: [
 
-          ///----- rechercher
-          GestureDetector(
-            onTap: () {
 
-            },
-            child: Icon(
-              Icons.search, size: 30, color: Colors.white
-            ),
-          ),
-
-          ///----- panier
+          ///----- profil
           GestureDetector(
             onTap: () {
               Navigator.of(context).push(
                 PageRouteBuilder(
                   pageBuilder: (context, animation, secondaryAnimation) =>
-                      Panier(),
+                      ProfilPage(),
                   transitionsBuilder: (context, animation, secondaryAnimation, child) {
                     const begin = Offset(1.0, 0.0); // Début de la transition
                     const end = Offset.zero; // Fin de la transition
@@ -69,20 +60,20 @@ class _IndexLaureatState extends State<IndexMadina> {
                 ),
               );
             },
-            child: Icon(
-              Icons.shopping_cart_outlined, size: 30, color: Colors.white,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: CircleAvatar(
+                radius: 18,
+                //backgroundImage: AssetImage("images/taadou.jpg"),
+                backgroundColor: Colors.white,
+                child: CircleAvatar(
+                  radius: 16,
+                  backgroundImage: AssetImage("images/iphone.jpg"),
+                ),
+              ),
             ),
           ),
 
-          ///----- parametre
-          GestureDetector(
-            onTap: () {
-
-            },
-            child: Icon(
-              Icons.more_vert, size: 30,color: Colors.white
-            ),
-          ),
 
 
 
@@ -153,14 +144,14 @@ class _IndexLaureatState extends State<IndexMadina> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    currentScreen = MessagePage();
+                    currentScreen = Panier();
                     currentTab = 1;
                   });
                 },
 
                 child: Column(
                   children: [
-                    new Icon(Icons.forum_outlined,
+                    new Icon(Icons.shopping_cart_outlined,
                         color: currentTab == 1 ? col_pp : Colors
                             .grey),
                   ],
@@ -190,14 +181,14 @@ class _IndexLaureatState extends State<IndexMadina> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    currentScreen = ProfilPage();
+                    currentScreen = RecherchePage();
                     currentTab = 3;
                   });
                 },
                 child: Column(
                   children: [
 
-                    new Icon(Icons.person,
+                    new Icon(Icons.search,
                         color: currentTab == 3 ? col_pp : Colors
                             .grey),
                   ],
