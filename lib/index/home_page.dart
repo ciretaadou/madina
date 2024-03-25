@@ -55,21 +55,13 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
-              GestureDetector(
-
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => DetailPublication()),
-                  );
-                },
-
-    child: Container(
+              Container(
                   margin: EdgeInsets.all(5),
                   width: MediaQuery.of(context).size.width / 2.2,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       color: Colors.grey.shade200,
+                      border: Border.all(color: col_pp ,width: 1)
                   ),
                   child: Column(
 
@@ -79,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                         child: Row(
                           children: [
                             Container(
-
+                              height:45,
                         padding: EdgeInsets.all(10),
                               child: CircleAvatar(
                                 radius: 18,
@@ -93,7 +85,16 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      Stack(
+                  GestureDetector(
+
+                  onTap: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DetailPublication()),
+                  );
+                  },
+
+                  child: Stack(
                         children: [
                           Container(
                             height: 170,
@@ -142,6 +143,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
+    ),
                       /// autre images
                       SizedBox(height: 2),
                       Container(
@@ -165,15 +167,15 @@ class _HomePageState extends State<HomePage> {
 
                       Text("Fauteuil de bureau"),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
                           Text("Meuble"),
                         ],
                       ),
                       SizedBox(height: 2),
-                      _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 5, ),
-                      Row(
+                      _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 8, ),
+                     /* Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
@@ -192,12 +194,12 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ],
-                      ),
+                      ),*/
 
                     ],
                   ),
                 ),
-              ),
+
 
               Container(
                 margin: EdgeInsets.all(5),
@@ -286,9 +288,10 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     SizedBox(height: 2),
-                    Row(
+                /*    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        ///panier
                         Container(
                           padding: EdgeInsets.all(0),
                           decoration: BoxDecoration(
@@ -304,7 +307,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ],
-                    ),
+                    ), */
                     _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 5),
                   ],
                 ),
