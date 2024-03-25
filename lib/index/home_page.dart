@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:madina/couleur_page.dart';
 import 'package:madina/index/ajout_publication.dart';
 
-<<<<<<< HEAD
+
 import 'detail_publication.dart';
 
-=======
->>>>>>> origin/main
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -21,98 +19,107 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+          children: [
+
+          SizedBox(height: 8),
+      Container(
+          width: MediaQuery
+              .of(context)
+              .size
+              .width,
+          height: 25,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              SizedBox(width: 20),
+              _categorie("Toutes les categories", col_pp, height: 5),
+              SizedBox(width: 10),
+              _categorie("Telephone", Colors.grey, height: 5),
+              SizedBox(width: 10),
+              _categorie("Vêtement", Colors.grey, height: 5),
+              SizedBox(width: 10),
+              _categorie("Chaussure", Colors.grey, height: 5),
+              SizedBox(width: 10),
+              _categorie("Chaussure", Colors.grey, height: 5),
+              SizedBox(width: 10),
+              _categorie("Chaussure", Colors.grey, height: 5),
+              SizedBox(width: 10),
+              _categorie("Chaussure", Colors.grey, height: 5),
+              SizedBox(width: 10),
+              _categorie("Chaussure", Colors.grey, height: 5),
+              SizedBox(width: 10),
+              _categorie("Chaussure", Colors.grey, height: 5),
+              SizedBox(width: 10),
+              _categorie("Chaussure", Colors.grey, height: 5),
+            ],
+          )),
+      SizedBox(height: 8),
+
+      Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+      Container(
+
+      margin: EdgeInsets.all(5),
+      width: MediaQuery
+          .of(context)
+          .size
+          .width / 2.2,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Colors.grey.shade200,
+          border: Border.all(color: col_pp, width: 1)
+      ),
+      child: Column(
+
         children: [
-
-          SizedBox(height: 8),
           Container(
-              width: MediaQuery.of(context).size.width,
-              height: 25,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  SizedBox(width: 20),
-                  _categorie("Toutes les categories", col_pp, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Telephone", Colors.grey, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Vêtement", Colors.grey, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Chaussure", Colors.grey, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Chaussure", Colors.grey, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Chaussure", Colors.grey, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Chaussure", Colors.grey, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Chaussure", Colors.grey, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Chaussure", Colors.grey, height: 5),
-                  SizedBox(width: 10),
-                  _categorie("Chaussure", Colors.grey, height: 5),
-                ],
-              )),
-          SizedBox(height: 8),
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            child: Row(
+              children: [
+                Container(
+                  height: 45,
+                  padding: EdgeInsets.all(10),
+                  child: CircleAvatar(
+                    radius: 18,
+                    child: CircleAvatar(
+                      radius: 16,
+                      backgroundImage: AssetImage("images/iphone.jpg"),
+                    ),
+                  ),
+                ),
+                Text("CITADOU"),
+              ],
+            ),
+          ),
+          GestureDetector(
 
-              Container(
-<<<<<<< HEAD
-                  margin: EdgeInsets.all(5),
-                  width: MediaQuery.of(context).size.width / 2.2,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DetailPublication()),
+              );
+            },
+
+            child: Stack(
+              children: [
+                Container(
+                  height: 170,
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width / 2.2,
+                  clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey.shade200,
-                      border: Border.all(color: col_pp ,width: 1)
+                      image: DecorationImage(
+                          image: AssetImage("images/findo.jpg"),
+                          fit: BoxFit.cover
+                      )
                   ),
-                  child: Column(
-
-                    children: [
-                      Container(
-
-                        child: Row(
-                          children: [
-                            Container(
-                              height:45,
-                        padding: EdgeInsets.all(10),
-                              child: CircleAvatar(
-                                radius: 18,
-                                child: CircleAvatar(
-                                  radius: 16,
-                                  backgroundImage: AssetImage("images/iphone.jpg"),
-                                ),
-                              ),
-                            ),
-                            Text("CITADOU"),
-                          ],
-                        ),
-                      ),
-                  GestureDetector(
-
-                  onTap: () {
-                  Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => DetailPublication()),
-                  );
-                  },
-
-                  child: Stack(
-                        children: [
-                          Container(
-                            height: 170,
-                            width: MediaQuery.of(context).size.width / 2.2,
-                            clipBehavior: Clip.hardEdge,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                image: DecorationImage(
-                                    image: AssetImage("images/findo.jpg"),
-                                    fit: BoxFit.cover
-                                )
-                            ),
-                          ),
-                         /* Positioned(
+                ),
+                /* Positioned(
                             top: 1,
                             left: 1,
                             child: Container(
@@ -128,58 +135,65 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ),*/
-                          Positioned(
-                            top: 5,
-                            right: 5,
-                            child: Container(
-                              alignment: Alignment.center,
-                              padding: EdgeInsets.all(3),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                                  color: col_pp_vintage
-                              ),
-                              child: Text(
-                                "Vintage",
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-    ),
-                      /// autre images
-                      SizedBox(height: 2),
-                      Container(
-                        alignment: Alignment.center,
-                          width: MediaQuery.of(context).size.width,
-                          height: 25,
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: <Widget>[
+                Positioned(
+                  top: 5,
+                  right: 5,
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(3),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        color: col_pp_vintage
+                    ),
+                    child: Text(
+                      "Vintage",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
 
-                              SizedBox(width: 5),
-                              _categorieImages("images/findo.jpg", Colors.grey),
-                              SizedBox(width: 5),
-                              _categorieImages("images/iphone.jpg", Colors.grey),
-                              SizedBox(width: 5),
-                              _categorieImages("images/findo.jpg", Colors.grey),
-                              SizedBox(width: 5),
-                              _categorieImages("images/iphone.jpg", Colors.grey),
-                            ],
-                          )),
+          /// autre images
+          SizedBox(height: 2),
+          Container(
+              alignment: Alignment.center,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
+              height: 25,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
 
-                      Text("Fauteuil de bureau"),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
-                          Text("Meuble"),
-                        ],
-                      ),
-                      SizedBox(height: 2),
-                      _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 8, ),
-                     /* Row(
+                  SizedBox(width: 5),
+                  _categorieImages("images/findo.jpg", Colors.grey),
+                  SizedBox(width: 5),
+                  _categorieImages("images/iphone.jpg", Colors.grey),
+                  SizedBox(width: 5),
+                  _categorieImages("images/findo.jpg", Colors.grey),
+                  SizedBox(width: 5),
+                  _categorieImages("images/iphone.jpg", Colors.grey),
+                ],
+              )),
+
+          Text("Fauteuil de bureau"),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "categorie : ", style: TextStyle(fontWeight: FontWeight.bold),),
+              Text("Meuble"),
+            ],
+          ),
+          SizedBox(height: 2),
+          _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 8,),
+          /* Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
@@ -200,219 +214,111 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),*/
 
-                    ],
-                  ),
-                ),
 
-=======
-                margin: EdgeInsets.all(5),
-                width: MediaQuery.of(context).size.width / 2.2,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    //color: Colors.grey.shade200,
-                    border: Border.all(color: col_pp ,width: 1)
-                ),
-                child: Column(
-                  children: [
-                    Stack(
-                      children: [
-                        Container(
-                          height: 170,
-                          width: MediaQuery.of(context).size.width / 2.2,
-                          clipBehavior: Clip.hardEdge,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              image: DecorationImage(
-                                  image: AssetImage("images/findo.jpg"),
-                                  fit: BoxFit.cover
-                              )
-                          ),
-                        ),
-                        Positioned(
-                          top: 1,
-                          left: 1,
-                          child: Container(
-                            padding: EdgeInsets.all(10),
-                            child: CircleAvatar(
-                              radius: 18,
-                              //backgroundImage: AssetImage("images/taadou.jpg"),
-                              backgroundColor: col_pp,
-                              child: CircleAvatar(
-                                radius: 16,
-                                backgroundImage: AssetImage("images/iphone.jpg"),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          top: 5,
-                          right: 5,
-                          child: Container(
-                            alignment: Alignment.center,
-                            padding: EdgeInsets.all(3),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(15)),
-                                color: col_pp_vintage
-                            ),
-                            child: Text(
-                              "Vintage",
-                              style: TextStyle(
-                                  color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    /// autre images
-                    SizedBox(height: 2),
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 25,
-                        child: ListView(
-                          scrollDirection: Axis.horizontal,
-                          children: <Widget>[
-                            SizedBox(width: 20),
-                            _categorieImages("images/findo.jpg", Colors.grey),
-                            SizedBox(width: 10),
-                            _categorieImages("images/iphone.jpg", Colors.grey),
-                            SizedBox(width: 20),
-                            _categorieImages("images/findo.jpg", Colors.grey),
-                            SizedBox(width: 10),
-                            _categorieImages("images/iphone.jpg", Colors.grey),
-                          ],
-                        )),
+       ],
+      ),
+    ),
 
-                    Text("Fauteuil de bureau"),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
-                        Text("Meuble"),
-                      ],
-                    ),
-                    SizedBox(height: 2),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(0),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(100)),
-                              color: Colors.transparent,
-                              border: Border.all(color: col_pp, width: 2)
-                          ),
-                          child: IconButton(
-                            onPressed: (){
 
-                            },
-                            icon: Icon(Icons.shopping_cart_outlined, color: col_pp, size: 35,),
-                          ),
-                        ),
-                      ],
-                    ),
-                    _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 5),
-                  ],
-                ),
-              ),
->>>>>>> origin/main
 
-              Container(
-                margin: EdgeInsets.all(5),
-                width: MediaQuery.of(context).size.width / 2.2,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    //color: Colors.grey.shade200,
-                    border: Border.all(color: col_pp ,width: 1)
-                ),
-                child: Column(
-                  children: [
-                    Stack(
-                      children: [
-                        Container(
-                          height: 170,
-                          width: MediaQuery.of(context).size.width / 2.2,
-                          clipBehavior: Clip.hardEdge,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              image: DecorationImage(
-                                  image: AssetImage("images/iphone.jpg"),
-                                  fit: BoxFit.cover
-                              )
-                          ),
-                        ),
-                        Positioned(
-                          top: 1,
-                          left: 1,
-                          child: Container(
-                            padding: EdgeInsets.all(10),
-                            child: CircleAvatar(
-                              radius: 18,
-                              //backgroundImage: AssetImage("images/taadou.jpg"),
-                              backgroundColor: col_pp,
-                              child: CircleAvatar(
-                                radius: 16,
-                                backgroundImage: AssetImage("images/iphone.jpg"),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          top: 5,
-                          right: 5,
-                          child: Container(
-                            alignment: Alignment.center,
-                            padding: EdgeInsets.all(3),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(15)),
-                                color: col_pp_vintage
-                            ),
-                            child: Text(
-                              "Vintage",
-                              style: TextStyle(
-                                  color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    /// autre images
-                    SizedBox(height: 2),
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 25,
-                        child: ListView(
-                          scrollDirection: Axis.horizontal,
-                          children: <Widget>[
-                            SizedBox(width: 20),
-                            _categorieImages("images/findo.jpg", Colors.grey),
-                            SizedBox(width: 10),
-                            _categorieImages("images/iphone.jpg", Colors.grey),
-                            SizedBox(width: 20),
-                            _categorieImages("images/findo.jpg", Colors.grey),
-                            SizedBox(width: 10),
-                            _categorieImages("images/iphone.jpg", Colors.grey),
-                          ],
-                        )),
 
-                    Text("Fauteuil de bureau"),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
-                        Text("Meuble"),
-                      ],
-                    ),
-                    SizedBox(height: 2),
-<<<<<<< HEAD
-                /*    Row(
+    Container(
+    margin: EdgeInsets.all(5),
+    width: MediaQuery.of(context).size.width / 2.2,
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(12),
+    //color: Colors.grey.shade200,
+    border: Border.all(color: col_pp ,width: 1)
+    ),
+    child: Column(
+    children: [
+    Stack(
+    children: [
+    Container(
+    height: 170,
+    width: MediaQuery.of(context).size.width / 2.2,
+    clipBehavior: Clip.hardEdge,
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(12),
+    image: DecorationImage(
+    image: AssetImage("images/iphone.jpg"),
+    fit: BoxFit.cover
+    )
+    ),
+    ),
+    Positioned(
+    top: 1,
+    left: 1,
+    child: Container(
+    padding: EdgeInsets.all(10),
+    child: CircleAvatar(
+    radius: 18,
+    //backgroundImage: AssetImage("images/taadou.jpg"),
+    backgroundColor: col_pp,
+    child: CircleAvatar(
+    radius: 16,
+    backgroundImage: AssetImage("images/iphone.jpg"),
+    ),
+    ),
+    ),
+    ),
+    Positioned(
+    top: 5,
+    right: 5,
+    child: Container(
+    alignment: Alignment.center,
+    padding: EdgeInsets.all(3),
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.all(Radius.circular(15)),
+    color: col_pp_vintage
+    ),
+    child: Text(
+    "Vintage",
+    style: TextStyle(
+    color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold),
+    ),
+    ),
+    ),
+    ],
+    ),
+    /// autre images
+    SizedBox(height: 2),
+    Container(
+    width: MediaQuery.of(context).size.width,
+    height: 25,
+    child: ListView(
+    scrollDirection: Axis.horizontal,
+    children: <Widget>[
+    SizedBox(width: 20),
+    _categorieImages("images/findo.jpg", Colors.grey),
+    SizedBox(width: 10),
+    _categorieImages("images/iphone.jpg", Colors.grey),
+    SizedBox(width: 20),
+    _categorieImages("images/findo.jpg", Colors.grey),
+    SizedBox(width: 10),
+    _categorieImages("images/iphone.jpg", Colors.grey),
+    ],
+    )),
+
+    Text("Fauteuil de bureau"),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: [
+    Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+    Text("Meuble"),
+    ],
+    ),
+    SizedBox(height: 2),
+
+    /*    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ///panier
-=======
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
->>>>>>> origin/main
+
                         Container(
                           padding: EdgeInsets.all(0),
                           decoration: BoxDecoration(
@@ -428,47 +334,20 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ],
-<<<<<<< HEAD
+
                     ), */
-=======
-                    ),
->>>>>>> origin/main
-                    _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 5),
-                  ],
-                ),
-              ),
-            ],
-          ),
 
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          Navigator.of(context).push(
-            PageRouteBuilder(
-              pageBuilder: (context, animation, secondaryAnimation) =>
-                  AjoutPublication(
 
-                  ),
-              transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                const begin = Offset(1.0, 0.0); // Début de la transition
-                const end = Offset.zero; // Fin de la transition
-                const curve = Curves.linear; // Courbe d'animation
+    _categorie("Prix:1.000.000 gnf", col_pp_prix, height: 5),
+    ],
+    ),
+    ),
+    ],
+    ),
 
-                var tween = Tween(begin: begin, end: end)
-                    .chain(CurveTween(curve: curve));
-                var offsetAnimation = animation.drive(tween);
 
-                return SlideTransition(
-                  position: offsetAnimation,
-                  child: child,
-                );
-              },
-            ),
-          );
-        },
-        child: Icon(Icons.add),
-      ),
+
+    ]),
     );
   }
 
@@ -489,28 +368,23 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
- Widget _categorieImages(String images, Color textColor) {
-    return  Container(
-      height: 100,
-<<<<<<< HEAD
-      width: 30,
-      //clipBehavior: Clip.hardEdge,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-=======
-      width: 50,
-      //clipBehavior: Clip.hardEdge,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
->>>>>>> origin/main
-          image: DecorationImage(
-              image: AssetImage("${images}"),
-              fit: BoxFit.cover
-          )
-      ),
+  Widget _categorieImages(String images, Color textColor) {
+    return Container(
+        height: 100,
+
+    width: 30,
+    //clipBehavior: Clip.hardEdge,
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+
+    image: DecorationImage(
+    image: AssetImage("${images}"),
+    fit: BoxFit.cover
+    )
+    )
+    ,
     );
   }
-
 
 
 }
