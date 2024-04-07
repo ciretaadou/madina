@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:madina/connexion/connexion_page.dart';
 import 'package:madina/index/home_page.dart';
 import 'package:madina/index/index.dart';
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  IndexMadina(),
+      home:  ConnexionPage(),
     );
   }
 }
