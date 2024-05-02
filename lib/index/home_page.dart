@@ -83,11 +83,14 @@ class _HomePageState extends State<HomePage> {
                       width: MediaQuery.of(context).size.width / 2.2,
                       clipBehavior: Clip.hardEdge,
                       decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius:  BorderRadius.only(
+                        topLeft: Radius.circular(12.0),
+                        topRight: Radius.circular(12.0),
+                      ),
                       image: DecorationImage(
                       image: AssetImage("images/iphone.jpg"),
                       fit: BoxFit.cover
-                      )
+                      ),
                     ),
                 ),
                 Positioned(
@@ -149,7 +152,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text("categorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
+                Text("Catégorie : " , style: TextStyle(fontWeight: FontWeight.bold),),
                 Text("Meuble"),
               ],
             ),
@@ -186,7 +189,10 @@ class _HomePageState extends State<HomePage> {
                           width: MediaQuery.of(context).size.width / 2.2,
                           clipBehavior: Clip.hardEdge,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius:  BorderRadius.only(
+                                topLeft: Radius.circular(12.0),
+                                topRight: Radius.circular(12.0),
+                                ),
                               image: DecorationImage(
                                   image: AssetImage("images/chaussure.jpg"),
                                   fit: BoxFit.cover
@@ -306,7 +312,7 @@ class _HomePageState extends State<HomePage> {
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: height),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        borderRadius: BorderRadius.all(Radius.circular(12 )),
         color: textColor.withAlpha(isPrimaryCard ? 200 : 50),
       ),
       child: Text(
