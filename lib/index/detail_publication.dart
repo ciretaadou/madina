@@ -69,7 +69,7 @@ class _DetailPublicationState extends State<DetailPublication> {
                           ),
                         ),
                         Container(
-                          height: 100,
+                          height: 100,   
                           child: Stack(
                             children: [
                               // Nom
